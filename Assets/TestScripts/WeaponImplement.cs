@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace AE3311
 {
-    public class Bomb : Weapon
+    public class Sword : Weapon
     {
         public override float Attack()
         {
