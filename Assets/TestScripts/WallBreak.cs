@@ -4,19 +4,21 @@ namespace AE3311
 {
     public class DisableKinematicForTaggedObjects : MonoBehaviour
     {
-        private bool isPulled;
+        [SerializeField] public string message;
+        [SerializeField] public GameObject objecting;
         public GameObject[] breakableObject;
-        async void Start()
+
+        public void Start()
         {
-            breakableObject = GameObject.FindGameObjectsWithTag("BWallA");
             {
+                breakableObject = GameObject.FindGameObjectsWithTag("BWallA");
                 foreach (GameObject obj in breakableObject)
                 {
-                    Rigidbody rb = obj.GetComponent<Rigidbody>();
+                    Rigidbody rb = obj.GetComponentInChildren<Rigidbody>();
                     if (rb != null)
                     {
                         rb.isKinematic = false;
-                        Debug.Log("boom falling block");
+                        Debug.Log(message);
                     }
                 }
             }
@@ -24,3 +26,23 @@ namespace AE3311
         }
     }
 }
+
+
+/*
+{
+    breakableObject = GameObject.FindGameObjectsWithTag("BWallA");
+    foreach (GameObject obj in breakableObject)
+    {
+        Rigidbody rb = obj.GetComponentInChildren<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            Debug.Log(message);
+        }
+    }
+}
+
+        }
+    }
+}
+*/
