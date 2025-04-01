@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace AE3311
-{
+{/*
     public class Student1 : Student
     {
 
@@ -10,6 +10,10 @@ namespace AE3311
             if (Motivated == true)
             {
                 Debug.Log("I think I will do my homework today.");
+            }
+            else
+            {
+                Debug.Log("I think i'll do my homework tomorrow..");
             }
         }
 
@@ -30,4 +34,5 @@ namespace AE3311
 
         }
     }
+    */
 }
